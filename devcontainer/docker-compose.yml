@@ -2,6 +2,7 @@ version: '3'
 
 services:
   app:
+    container_name: reStore-ECommerce-Backend
     build: 
       context: .
       dockerfile: Dockerfile
@@ -22,6 +23,7 @@ services:
     # (Adding the "ports" property to this file will not forward from a Codespace.)
 
   db:
+    container_name: reStore-ECommerce-Backend-db-mssql
     image: mcr.microsoft.com/mssql/server:2019-latest
     restart: unless-stopped
     environment:
